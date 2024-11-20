@@ -1,0 +1,36 @@
+html {
+  font-family: Inter sans-serif;
+  }
+  .heading {
+    color: #FFFFFF;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+              }
+  .body {
+    color: #FFFFFF;
+    position: fixed;
+    width: 100%;
+              }
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom:0;
+    width: 100%;
+    text-align: center;
+  }
+  a:link {
+    color: #1565C0;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:visited {
+    color: #c58af9;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #c58af9;
+    background-color: transparent;
+    text-decoration: underline;
+  }
