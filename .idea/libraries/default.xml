@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="default">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/minecraft0.30/default.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
