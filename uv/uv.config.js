@@ -3,7 +3,7 @@ self.__uv$config = {
     prefix: '/service/',
 
     /* Bare server URL */ 
-    bare: 'https://bare.electrial.site',
+    bare: 'https://bare.benrogo.net', 'bare-ovh-res-1.benrogo.net',
     
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
