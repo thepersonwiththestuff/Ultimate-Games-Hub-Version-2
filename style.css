@@ -2,13 +2,13 @@ html {
   font-family: Inter sans-serif;
   }
   .heading {
-    color: #FFFFFF;
+    color: #12e007;
     text-align: center;
     position: fixed;
     width: 100%;
               }
   .body {
-    color: #FFFFFF;
+    color: #12e007;
     position: fixed;
     width: 100%;
               }
@@ -20,7 +20,7 @@ html {
     text-align: center;
   }
   a:link {
-    color: #1565C0;
+    color: #12e007;
     background-color: transparent;
     text-decoration: none;
   }
