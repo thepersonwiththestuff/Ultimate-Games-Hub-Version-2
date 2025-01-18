@@ -62,7 +62,6 @@
         	<div class="heading" style='background-color: #000000'>
         <h1>Ultimate Game Hub V3</h1>
 	</div>
-	<br></br><br></br>
 
 
 
@@ -72,288 +71,210 @@
 
 
 
-
-
-
-
-	      
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spinning Wheel</title>
+    <title>Random Link Generator</title>
     <style>
         body {
-            background-color: #121212;
-            color: #ffffff;
             font-family: Arial, sans-serif;
             text-align: center;
+            margin-top: 50px;
         }
-        #wheelCanvas {
-            border: 2px solid #ccc;
-            border-radius: 50%;
-            margin: 20px auto;
-            display: block;
-        }
-        #spinButton {
-            display: block;
-            margin: 20px auto;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            background-color: #3498db;
-            color: white;
-            border: none;
-            border-radius: 5px;
-        }
-        #spinButton:hover {
-            background-color: #2980b9;
+        #randomLink {
+            display: none;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
 
-<canvas id="wheelCanvas" width="400" height="400"></canvas>
-<button id="spinButton">Spin the Wheel!</button>
+    <h1>Random Link Generator</h1>
+    <button id="generateButton">Generate Random Link</button>
+    <div id="randomLink">
+        <a id="link" href="#" target="_blank">Click here!</a>
+    </div>
 
-<script>
-    const subdomain = 'https://stealth-laylow.netlify.app/'; // Replace with your actual subdomain
+    <script>
+        const links = [
+            "https://stealth-laylow.netlify.app/1",
+            "https://stealth-laylow.netlify.app/1v1.lol",
+            "https://stealth-laylow.netlify.app/10minutestilldawn",
+            "https://stealth-laylow.netlify.app/2048",
+            "https://stealth-laylow.netlify.app/abandoned",
+            "https://stealth-laylow.netlify.app/abandoned-2",
+            "https://stealth-laylow.netlify.app/adanceoffireandice",
+            "https://stealth-laylow.netlify.app/adarkroom",
+            "https://stealth-laylow.netlify.app/adrenalinechallenge",
+            "https://stealth-laylow.netlify.app/adventuredrivers",
+            "https://stealth-laylow.netlify.app/ages-of-conflict",
+            "https://stealth-laylow.netlify.app/amidst-the-sky",
+            "https://stealth-laylow.netlify.app/another-gentlemans-adventure",
+            "https://stealth-laylow.netlify.app/asteroids",
+            "https://stealth-laylow.netlify.app/astray",
+            "https://stealth-laylow.netlify.app/awesome-tanks",
+            "https://stealth-laylow.netlify.app/awesome-tanks-2",
+            "https://stealth-laylow.netlify.app/babel-tower",
+            "https://stealth-laylow.netlify.app/backcountry",
+            "https://stealth-laylow.netlify.app/badicecream",
+            "https://stealth-laylow.netlify.app/badicecream2",
+            "https://stealth-laylow.netlify.app/badicecream3",
+            "https://stealth-laylow.netlify.app/basketball-stars",
+            "https://stealth-laylow.netlify.app/basketrandom",
+            "https://stealth-laylow.netlify.app/bitlife",
+            "https://stealth-laylow.netlify.app/blockblast",
+            "https://stealth-laylow.netlify.app/blosics",
+            "https://stealth-laylow.netlify.app/bounceback",
+            "https://stealth-laylow.netlify.app/boxingrandom",
+            "https://stealth-laylow.netlify.app/brawl-stars-project-laser",
+            "https://stealth-laylow.netlify.app/breaklock",
+            "https://stealth-laylow.netlify.app/breakout",
+            "https://stealth-laylow.netlify.app/chess",
+            "https://stealth-laylow.netlify.app/chromedino",
+            "https://stealth-laylow.netlify.app/clicker-heroes-updated",
+            "https://stealth-laylow.netlify.app/connect3",
+            "https://stealth-laylow.netlify.app/conways-game-of-life",
+            "https://stealth-laylow.netlify.app/cookieclicker",
+            "https://stealth-laylow.netlify.app/core-ball",
+            "https://stealth-laylow.netlify.app/crossy-road",
+            "https://stealth-laylow.netlify.app/cubefield",
+            "https://stealth-laylow.netlify.app/cut-the-rope",
+            "https://stealth-laylow.netlify.app/dadish",
+            "https://stealth-laylow.netlify.app/dadish-2",
+            "https://stealth-laylow.netlify.app/dadish-3",
+            "https://stealth-laylow.netlify.app/doge-miner",
+            "https://stealth-laylow.netlify.app/doodlejump",
+            "https://stealth-laylow.netlify.app/drift-boss",
+            "https://stealth-laylow.netlify.app/drive-mad",
+            "https://stealth-laylow.netlify.app/ducklife",
+            "https://stealth-laylow.netlify.app/ducklife2",
+            "https://stealth-laylow.netlify.app/ducklife3",
+            "https://stealth-laylow.netlify.app/ducklife4",
+            "https://stealth-laylow.netlify.app/dune",
+            "https://stealth-laylow.netlify.app/edgesurf",
+            "https://stealth-laylow.netlify.app/evilglitch",
+            "https://stealth-laylow.netlify.app/evowars",
+            "https://stealth-laylow.netlify.app/factoryballsforever",
+            "https://stealth-laylow.netlify.app/Fancy-Pants-Adventure-World1",
+            "https://stealth-laylow.netlify.app/fireboy-and-watergirl",
+            "https://stealth-laylow.netlify.app/fireboy-and-watergirl-2",
+            "https://stealth-laylow.netlify.app/fireboy-and-watergirl-3",
+            "https://stealth-laylow.netlify.app/fireboy-and-watergirl-4",
+            "https://stealth-laylow.netlify.app/fireboyandwatergirlintheforesttemple",
+            "https://stealth-laylow.netlify.app/flappybird",
+            "https://stealth-laylow.netlify.app/flash",
+            "https://stealth-laylow.netlify.app/friday-night-funkin",
+            "https://stealth-laylow.netlify.app/friendlyfire",
+            "https://stealth-laylow.netlify.app/geometrydash",
+            "https://stealth-laylow.netlify.app/getaway-shootout",
+            "https://stealth-laylow.netlify.app/gons-io",
+            "https://stealth-laylow.netlify.app/gopherkart",
+            "https://stealth-laylow.netlify.app/gunspin",
+            "https://stealth-laylow.netlify.app/hs-breaking-the-bank",
+            "https://stealth-laylow.netlify.app/hs-escaping-the-prison",
+            "https://stealth-laylow.netlify.app/hs-stealing-the-diamond",
+            "https://stealth-laylow.netlify.app/hs-infiltrating-the-airship",
+            "https://stealth-laylow.netlify.app/hs-fleeing-the-complex",
+            "https://stealth-laylow.netlify.app/hextris",
+            "https://stealth-laylow.netlify.app/iceagebabyadventure",
+            "https://stealth-laylow.netlify.app/idle-breakout",
+            "https://stealth-laylow.netlify.app/incremancer",
+            "https://stealth-laylow.netlify.app/jumpingfrogspuzzle",
+            "https://stealth-laylow.netlify.app/konnekt",
+            "https://stealth-laylow.netlify.app/maptroid",
+            "https://stealth-laylow.netlify.app/mario-game",
+            "https://stealth-laylow.netlify.app/minecraft0.30",
+            "https://stealth-laylow.netlify.app/minecraft1.3",
+            "https://stealth-laylow.netlify.app/minecraft1.5.2",
+            "https://stealth-laylow.netlify.app/monkey-mart",
+            "https://stealth-laylow.netlify.app/motox3m",
+            "https://stealth-laylow.netlify.app/motox3m2",
+            "https://stealth-laylow.netlify.app/n-gon",
+            "https://stealth-laylow.netlify.app/n-step-steve-part-1",
+            "https://stealth-laylow.netlify.app/n-step-steve-part-2",
+            "https://stealth-laylow.netlify.app/ovo",
+            "https://stealth-laylow.netlify.app/pacman",
+            "https://stealth-laylow.netlify.app/particle-clicker",
+            "https://stealth-laylow.netlify.app/pcraft",
+            "https://stealth-laylow.netlify.app/planet-life",
+            "https://stealth-laylow.netlify.app/precision-client",
+                        "https://stealth-laylow.netlify.app/progress-knight-quest",
+            "https://stealth-laylow.netlify.app/progress-knight-reborn",
+            "https://stealth-laylow.netlify.app/pull-of-war",
+            "https://stealth-laylow.netlify.app/pushback",
+            "https://stealth-laylow.netlify.app/racer",
+            "https://stealth-laylow.netlify.app/radiusraid",
+            "https://stealth-laylow.netlify.app/reach-the-core",
+            "https://stealth-laylow.netlify.app/restless-wing-syndrome",
+            "https://stealth-laylow.netlify.app/retrobowl",
+            "https://stealth-laylow.netlify.app/retrohaunt",
+            "https://stealth-laylow.netlify.app/riddleschool",
+            "https://stealth-laylow.netlify.app/riddleschool2",
+            "https://stealth-laylow.netlify.app/riddleschool3",
+            "https://stealth-laylow.netlify.app/riddleschool4",
+            "https://stealth-laylow.netlify.app/riddleschool5",
+            "https://stealth-laylow.netlify.app/rift-shift",
+            "https://stealth-laylow.netlify.app/roadblocks",
+            "https://stealth-laylow.netlify.app/rooftop-snipers",
+            "https://stealth-laylow.netlify.app/rookie-bowman",
+            "https://stealth-laylow.netlify.app/run-3",
+            "https://stealth-laylow.netlify.app/sandspiel",
+            "https://stealth-laylow.netlify.app/scuba-gear",
+            "https://stealth-laylow.netlify.app/sleepingbeauty",
+            "https://stealth-laylow.netlify.app/slope",
+            "https://stealth-laylow.netlify.app/smart-ball",
+            "https://stealth-laylow.netlify.app/smash-karts",
+            "https://stealth-laylow.netlify.app/snake",
+            "https://stealth-laylow.netlify.app/snowrider3d",
+            "https://stealth-laylow.netlify.app/soccerrandom",
+            "https://stealth-laylow.netlify.app/spacecompany",
+            "https://stealth-laylow.netlify.app/spaceinvaders",
+            "https://stealth-laylow.netlify.app/stickman-hook",
+            "https://stealth-laylow.netlify.app/subway-surfers",
+            "https://stealth-laylow.netlify.app/subway-surfers-ny",
+            "https://stealth-laylow.netlify.app/tanuki-sunset",
+            "https://stealth-laylow.netlify.app/temple-run-2",
+            "https://stealth-laylow.netlify.app/tetris",
+            "https://stealth-laylow.netlify.app/thechromaincident",
+            "https://stealth-laylow.netlify.app/the-final-earth",
+            "https://stealth-laylow.netlify.app/thereisnogame",
+            "https://stealth-laylow.netlify.app/the-treasure",
+            "https://stealth-laylow.netlify.app/time-shooter",
+            "https://stealth-laylow.netlify.app/time-shooter-3",
+            "https://stealth-laylow.netlify.app/tiny-fishing",
+            "https://stealth-laylow.netlify.app/towermaster",
+            "https://stealth-laylow.netlify.app/trace",
+            "https://stealth-laylow.netlify.app/tunnelrush",
+            "https://stealth-laylow.netlify.app/two-ball-3d",
+            "https://stealth-laylow.netlify.app/underrun",
+            "https://stealth-laylow.netlify.app/vex3",
+            "https://stealth-laylow.netlify.app/vex4",
+            "https://stealth-laylow.netlify.app/vex5",
+            "https://stealth-laylow.netlify.app/vex6",
+            "https://stealth-laylow.netlify.app/vex7",
+            "https://stealth-laylow.netlify.app/volleyrandom",
+            "https://stealth-laylow.netlify.app/w-flash",
+            "https://stealth-laylow.netlify.app/where-is-the-water",
+            "https://stealth-laylow.netlify.app/worldshardestgame",
+                        "https://stealth-laylow.netlify.app/worldshardestgame2",
+            "https://stealth-laylow.netlify.app/x-trench-run",
+            "https://stealth-laylow.netlify.app/xx142b2.exe",
+            "https://stealth-laylow.netlify.app/yohoho"
+        ];
 
-    const links = [
-    subdomain + '1',
-    subdomain + '1v1.lol',
-    subdomain + '10minutestilldawn',
-    subdomain + '2048',
-    subdomain + 'abandoned',
-    subdomain + 'abandoned-2',
-    subdomain + 'adanceoffireandice',
-    subdomain + 'adarkroom',
-    subdomain + 'adrenalinechallenge',
-    subdomain + 'adventuredrivers',
-    subdomain + 'ages-of-conflict',
-    subdomain + 'amidst-the-sky',
-    subdomain + 'another-gentlemans-adventure',
-    subdomain + 'asteroids',
-    subdomain + 'astray',
-    subdomain + 'awesome-tanks',
-    subdomain + 'awesome-tanks-2',
-    subdomain + 'babel-tower',
-    subdomain + 'backcountry',
-    subdomain + 'badicecream',
-    subdomain + 'badicecream2',
-    subdomain + 'badicecream3',
-    subdomain + 'basketball-stars',
-    subdomain + 'basketrandom',
-    subdomain + 'bitlife',
-    subdomain + 'blockblast',
-    subdomain + 'blosics',
-    subdomain + 'bounceback',
-    subdomain + 'boxingrandom',
-    subdomain + 'brawl-stars-project-laser',
-    subdomain + 'breaklock',
-    subdomain + 'breakout',
-    subdomain + 'chess',
-    subdomain + 'chromedino',
-    subdomain + 'clicker-heroes-updated',
-    subdomain + 'connect3',
-    subdomain + 'conways-game-of-life',
-    subdomain + 'cookieclicker',
-    subdomain + 'core-ball',
-    subdomain + 'crossy-road',
-    subdomain + 'cubefield',
-    subdomain + 'cut-the-rope',
-    subdomain + 'dadish',
-    subdomain + 'dadish-2',
-    subdomain + 'dadish-3',
-    subdomain + 'doge-miner',
-    subdomain + 'doodlejump',
-    subdomain + 'drift-boss',
-    subdomain + 'drive-mad',
-    subdomain + 'ducklife',
-    subdomain + 'ducklife2',
-    subdomain + 'ducklife3',
-    subdomain + 'ducklife4',
-    subdomain + 'dune',
-    subdomain + 'edgesurf',
-    subdomain + 'evilglitch',
-    subdomain + 'evowars',
-    subdomain + 'factoryballsforever',
-    subdomain + 'Fancy-Pants-Adventure-World1',
-    subdomain + 'fireboy-and-watergirl',
-    subdomain + 'fireboy-and-watergirl-2',
-    subdomain + 'fireboy-and-watergirl-3',
-    subdomain + 'fireboy-and-watergirl-4',
-    subdomain + 'fireboyandwatergirlintheforesttemple',
-    subdomain + 'flappybird',
-    subdomain + 'flash',
-    subdomain + 'friday-night-funkin',
-    subdomain + 'friendlyfire',
-    subdomain + 'geometrydash',
-    subdomain + 'getaway-shootout',
-    subdomain + 'gons-io',
-    subdomain + 'gopherkart',
-    subdomain + 'gunspin',
-    subdomain + 'hs-breaking-the-bank',
-    subdomain + 'hs-escaping-the-prison',
-    subdomain + 'hs-stealing-the-diamond',
-    subdomain + 'hs-infiltrating-the-airship',
-    subdomain + 'hs-fleeing-the-complex',
-    subdomain + 'hextris',
-    subdomain + 'iceagebabyadventure',
-    subdomain + 'idle-breakout',
-    subdomain + 'incremancer',
-    subdomain + 'jumpingfrogspuzzle',
-    subdomain + 'konnekt',
-    subdomain + 'maptroid',
-    subdomain + 'mario-game',
-    subdomain + 'minecraft0.30',
-    subdomain + 'minecraft1.3',
-    subdomain + 'minecraft1.5.2',
-    subdomain + 'monkey-mart',
-    subdomain + 'motox3m',
-    subdomain + 'motox3m2',
-    subdomain + 'n-gon',
-    subdomain + 'n-step-steve-part-1',
-    subdomain + 'n-step-steve-part-2',
-    subdomain + 'ovo',
-    subdomain + 'pacman',
-    subdomain + 'particle-clicker',
-    subdomain + 'pcraft',
-    subdomain + 'planet-life',
-    subdomain + 'precision-client',
-    subdomain + 'progress-knight-quest',
-    subdomain + 'progress-knight-reborn',
-    subdomain + 'pull-of-war',
-    subdomain + 'pushback',
-    subdomain + 'racer',
-    subdomain + 'radiusraid',
-    subdomain + 'reach-the-core',
-    subdomain + 'restless-wing-syndrome',
-    subdomain + 'retro-bowl',
-    subdomain + 'retrohaunt',
-    subdomain + 'riddle-school',
-    subdomain + 'riddle-school-2',
-    subdomain + 'riddle-school-3',
-    subdomain + 'riddle-school-4',
-    subdomain + 'riddle-school-5',
-    subdomain + 'rift-shift',
-    subdomain + 'roadblocks',
-    subdomain + 'rooftop-snipers',
-    subdomain + 'rookie-bowman',
-    subdomain + 'run-3',
-    subdomain + 'sandspiel',
-    subdomain + 'scuba-gear',
-    subdomain + 'sleepingbeauty',
-    subdomain + 'slope',
-    subdomain + 'smart-ball',
-    subdomain + 'smash-karts',
-    subdomain + 'snake',
-    subdomain + 'snowrider3d',
-    subdomain + 'soccerrandom',
-    subdomain + 'spacecompany',
-    subdomain + 'spaceinvaders',
-    subdomain + 'stickman-hook',
-    subdomain + 'subway-surfers',
-    subdomain + 'subway-surfers-ny',
-    subdomain + 'tanuki-sunset',
-    subdomain + 'temple-run-2',
-    subdomain + 'tetris',
-    subdomain + 'thechromaincident',
-    subdomain + 'the-final-earth',
-    subdomain + 'thereisnogame',
-    subdomain + 'the-treasure',
-    subdomain + 'time-shooter',
-    subdomain + 'time-shooter-3',
-    subdomain + 'tiny-fishing',
-    subdomain + 'towermaster',
-    subdomain + 'trace',
-    subdomain + 'tunnelrush',
-    subdomain + 'two-ball-3d',
-    subdomain + 'underrun',
-    subdomain + 'vex3',
-    subdomain + 'vex4',
-    subdomain + 'vex5',
-    subdomain + 'vex6',
-    subdomain + 'vex7',
-    subdomain + 'volleyrandom',
-    subdomain + 'w-flash',
-    subdomain + 'where-is-the-water',
-    subdomain + 'worldshardestgame',
-    subdomain + 'worldshardestgame2',
-    subdomain + 'x-trench-run',
-    subdomain + 'xx142b2.exe',
-    subdomain + 'yohoho'
-];
+        document.getElementById('generateButton').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * links.length);
+            const randomLink = links[randomIndex];
+            const linkElement = document.getElementById('link');
 
-    ];
-
-    const numSegments = 25; // Number of segments in the wheel
-    const colors = [
-        '#FF5733', '#33FF57', '#3357FF', '#F1C40F', 
-        '#8E44AD', '#E74C3C', '#3498DB', '#2ECC71', 
-        '#9B59B6', '#E67E22', '#FF33A1', '#33FFF5',
-        '#FF8C00', '#8A2BE2', '#7FFF00', '#D2691E',
-        '#FF4500', '#FFD700', '#ADFF2F', '#00CED1',
-        '#FF1493', '#00BFFF', '#FF6347', '#4682B4',
-        '#B22222'
-    ]; // Colors for each segment
-
-    const canvas = document.getElementById('wheelCanvas');
-    const ctx = canvas.getContext('2d');
-    const angle = (2 * Math.PI) / numSegments;
-
-    function drawWheel() {
-        for (let i = 0; i < numSegments; i++) {
-            const startAngle = i * angle;
-            const endAngle = startAngle + angle;
-
-            // Draw segment
-            ctx.beginPath();
-            ctx.moveTo(200, 200);
-            ctx.arc(200, 200, 150, startAngle, endAngle);
-            ctx.fillStyle = colors[i % colors.length]; // Cycle through colors
-            ctx.fill();
-            ctx.stroke();
-        }
-    }
-
-    let rotation = 0;
-
-    document.getElementById('spinButton').addEventListener('click', function() {
-        const spinDuration = 4000; // 4 seconds
-        const spinAngle = Math.random() * 360 + 720; // Random spin + 2 full rotations
-        const startTime = performance.now();
-
-        function animate(time) {
-            const elapsed = time - startTime;
-            const progress = Math.min(elapsed / spinDuration, 1);
-            rotation = progress * spinAngle;
-
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.save();
-            ctx.translate(200, 200);
-            ctx.rotate((rotation * Math.PI) / 180);
-            ctx.translate(-200, -200);
-            drawWheel();
-            ctx.restore();
-
-            if (progress < 1) {
-                requestAnimationFrame(animate);
-            } else {
-                const selectedSegment = Math.floor(((rotation % 360) / 360) * numSegments);
-                console.log(`Selected Segment: ${selectedSegment + 1}`); // Log the selected segment
-                // Open the corresponding URL
-                window.location.href = links[selectedSegment]; // Redirect to the selected link
-            }
-        }
-
-        requestAnimationFrame(animate);
-    });
-
-    drawWheel(); // Initial drawing of the wheel
-</script>
+            linkElement.href = randomLink;
+            linkElement.textContent = randomLink;
+            document.getElementById('randomLink').style.display = 'block';
+        });
+    </script>
 
 </body>
 </html>
@@ -371,9 +292,7 @@
 
 
 	      
-
-
-	      
+	<br></br><br></br>
       <h3 style="color: #12e007;">Emulated Games</h3>
 	  <a href="javascript:qwerty()">Webretro</a>
           <br><br>
