@@ -63,6 +63,317 @@
         <h1>Ultimate Game Hub V3</h1>
 	</div>
 	<br></br><br></br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	      
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinning Wheel</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #wheelCanvas {
+            border: 2px solid #ccc;
+            border-radius: 50%;
+            margin: 20px auto;
+            display: block;
+        }
+        #spinButton {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        #spinButton:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+<canvas id="wheelCanvas" width="400" height="400"></canvas>
+<button id="spinButton">Spin the Wheel!</button>
+
+<script>
+    const subdomain = 'https://stealth-laylow.netlify.app/'; // Replace with your actual subdomain
+
+    const links = [
+    subdomain + '1',
+    subdomain + '1v1.lol',
+    subdomain + '10minutestilldawn',
+    subdomain + '2048',
+    subdomain + 'abandoned',
+    subdomain + 'abandoned-2',
+    subdomain + 'adanceoffireandice',
+    subdomain + 'adarkroom',
+    subdomain + 'adrenalinechallenge',
+    subdomain + 'adventuredrivers',
+    subdomain + 'ages-of-conflict',
+    subdomain + 'amidst-the-sky',
+    subdomain + 'another-gentlemans-adventure',
+    subdomain + 'asteroids',
+    subdomain + 'astray',
+    subdomain + 'awesome-tanks',
+    subdomain + 'awesome-tanks-2',
+    subdomain + 'babel-tower',
+    subdomain + 'backcountry',
+    subdomain + 'badicecream',
+    subdomain + 'badicecream2',
+    subdomain + 'badicecream3',
+    subdomain + 'basketball-stars',
+    subdomain + 'basketrandom',
+    subdomain + 'bitlife',
+    subdomain + 'blockblast',
+    subdomain + 'blosics',
+    subdomain + 'bounceback',
+    subdomain + 'boxingrandom',
+    subdomain + 'brawl-stars-project-laser',
+    subdomain + 'breaklock',
+    subdomain + 'breakout',
+    subdomain + 'chess',
+    subdomain + 'chromedino',
+    subdomain + 'clicker-heroes-updated',
+    subdomain + 'connect3',
+    subdomain + 'conways-game-of-life',
+    subdomain + 'cookieclicker',
+    subdomain + 'core-ball',
+    subdomain + 'crossy-road',
+    subdomain + 'cubefield',
+    subdomain + 'cut-the-rope',
+    subdomain + 'dadish',
+    subdomain + 'dadish-2',
+    subdomain + 'dadish-3',
+    subdomain + 'doge-miner',
+    subdomain + 'doodlejump',
+    subdomain + 'drift-boss',
+    subdomain + 'drive-mad',
+    subdomain + 'ducklife',
+    subdomain + 'ducklife2',
+    subdomain + 'ducklife3',
+    subdomain + 'ducklife4',
+    subdomain + 'dune',
+    subdomain + 'edgesurf',
+    subdomain + 'evilglitch',
+    subdomain + 'evowars',
+    subdomain + 'factoryballsforever',
+    subdomain + 'Fancy-Pants-Adventure-World1',
+    subdomain + 'fireboy-and-watergirl',
+    subdomain + 'fireboy-and-watergirl-2',
+    subdomain + 'fireboy-and-watergirl-3',
+    subdomain + 'fireboy-and-watergirl-4',
+    subdomain + 'fireboyandwatergirlintheforesttemple',
+    subdomain + 'flappybird',
+    subdomain + 'flash',
+    subdomain + 'friday-night-funkin',
+    subdomain + 'friendlyfire',
+    subdomain + 'geometrydash',
+    subdomain + 'getaway-shootout',
+    subdomain + 'gons-io',
+    subdomain + 'gopherkart',
+    subdomain + 'gunspin',
+    subdomain + 'hs-breaking-the-bank',
+    subdomain + 'hs-escaping-the-prison',
+    subdomain + 'hs-stealing-the-diamond',
+    subdomain + 'hs-infiltrating-the-airship',
+    subdomain + 'hs-fleeing-the-complex',
+    subdomain + 'hextris',
+    subdomain + 'iceagebabyadventure',
+    subdomain + 'idle-breakout',
+    subdomain + 'incremancer',
+    subdomain + 'jumpingfrogspuzzle',
+    subdomain + 'konnekt',
+    subdomain + 'maptroid',
+    subdomain + 'mario-game',
+    subdomain + 'minecraft0.30',
+    subdomain + 'minecraft1.3',
+    subdomain + 'minecraft1.5.2',
+    subdomain + 'monkey-mart',
+    subdomain + 'motox3m',
+    subdomain + 'motox3m2',
+    subdomain + 'n-gon',
+    subdomain + 'n-step-steve-part-1',
+    subdomain + 'n-step-steve-part-2',
+    subdomain + 'ovo',
+    subdomain + 'pacman',
+    subdomain + 'particle-clicker',
+    subdomain + 'pcraft',
+    subdomain + 'planet-life',
+    subdomain + 'precision-client',
+    subdomain + 'progress-knight-quest',
+    subdomain + 'progress-knight-reborn',
+    subdomain + 'pull-of-war',
+    subdomain + 'pushback',
+    subdomain + 'racer',
+    subdomain + 'radiusraid',
+    subdomain + 'reach-the-core',
+    subdomain + 'restless-wing-syndrome',
+    subdomain + 'retro-bowl',
+    subdomain + 'retrohaunt',
+    subdomain + 'riddle-school',
+    subdomain + 'riddle-school-2',
+    subdomain + 'riddle-school-3',
+    subdomain + 'riddle-school-4',
+    subdomain + 'riddle-school-5',
+    subdomain + 'rift-shift',
+    subdomain + 'roadblocks',
+    subdomain + 'rooftop-snipers',
+    subdomain + 'rookie-bowman',
+    subdomain + 'run-3',
+    subdomain + 'sandspiel',
+    subdomain + 'scuba-gear',
+    subdomain + 'sleepingbeauty',
+    subdomain + 'slope',
+    subdomain + 'smart-ball',
+    subdomain + 'smash-karts',
+    subdomain + 'snake',
+    subdomain + 'snowrider3d',
+    subdomain + 'soccerrandom',
+    subdomain + 'spacecompany',
+    subdomain + 'spaceinvaders',
+    subdomain + 'stickman-hook',
+    subdomain + 'subway-surfers',
+    subdomain + 'subway-surfers-ny',
+    subdomain + 'tanuki-sunset',
+    subdomain + 'temple-run-2',
+    subdomain + 'tetris',
+    subdomain + 'thechromaincident',
+    subdomain + 'the-final-earth',
+    subdomain + 'thereisnogame',
+    subdomain + 'the-treasure',
+    subdomain + 'time-shooter',
+    subdomain + 'time-shooter-3',
+    subdomain + 'tiny-fishing',
+    subdomain + 'towermaster',
+    subdomain + 'trace',
+    subdomain + 'tunnelrush',
+    subdomain + 'two-ball-3d',
+    subdomain + 'underrun',
+    subdomain + 'vex3',
+    subdomain + 'vex4',
+    subdomain + 'vex5',
+    subdomain + 'vex6',
+    subdomain + 'vex7',
+    subdomain + 'volleyrandom',
+    subdomain + 'w-flash',
+    subdomain + 'where-is-the-water',
+    subdomain + 'worldshardestgame',
+    subdomain + 'worldshardestgame2',
+    subdomain + 'x-trench-run',
+    subdomain + 'xx142b2.exe',
+    subdomain + 'yohoho'
+];
+
+    ];
+
+    const numSegments = 25; // Number of segments in the wheel
+    const colors = [
+        '#FF5733', '#33FF57', '#3357FF', '#F1C40F', 
+        '#8E44AD', '#E74C3C', '#3498DB', '#2ECC71', 
+        '#9B59B6', '#E67E22', '#FF33A1', '#33FFF5',
+        '#FF8C00', '#8A2BE2', '#7FFF00', '#D2691E',
+        '#FF4500', '#FFD700', '#ADFF2F', '#00CED1',
+        '#FF1493', '#00BFFF', '#FF6347', '#4682B4',
+        '#B22222'
+    ]; // Colors for each segment
+
+    const canvas = document.getElementById('wheelCanvas');
+    const ctx = canvas.getContext('2d');
+    const angle = (2 * Math.PI) / numSegments;
+
+    function drawWheel() {
+        for (let i = 0; i < numSegments; i++) {
+            const startAngle = i * angle;
+            const endAngle = startAngle + angle;
+
+            // Draw segment
+            ctx.beginPath();
+            ctx.moveTo(200, 200);
+            ctx.arc(200, 200, 150, startAngle, endAngle);
+            ctx.fillStyle = colors[i % colors.length]; // Cycle through colors
+            ctx.fill();
+            ctx.stroke();
+        }
+    }
+
+    let rotation = 0;
+
+    document.getElementById('spinButton').addEventListener('click', function() {
+        const spinDuration = 4000; // 4 seconds
+        const spinAngle = Math.random() * 360 + 720; // Random spin + 2 full rotations
+        const startTime = performance.now();
+
+        function animate(time) {
+            const elapsed = time - startTime;
+            const progress = Math.min(elapsed / spinDuration, 1);
+            rotation = progress * spinAngle;
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.save();
+            ctx.translate(200, 200);
+            ctx.rotate((rotation * Math.PI) / 180);
+            ctx.translate(-200, -200);
+            drawWheel();
+            ctx.restore();
+
+            if (progress < 1) {
+                requestAnimationFrame(animate);
+            } else {
+                const selectedSegment = Math.floor(((rotation % 360) / 360) * numSegments);
+                console.log(`Selected Segment: ${selectedSegment + 1}`); // Log the selected segment
+                // Open the corresponding URL
+                window.location.href = links[selectedSegment]; // Redirect to the selected link
+            }
+        }
+
+        requestAnimationFrame(animate);
+    });
+
+    drawWheel(); // Initial drawing of the wheel
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	      
+
+
+	      
       <h3 style="color: #12e007;">Emulated Games</h3>
 	  <a href="javascript:qwerty()">Webretro</a>
           <br><br>
