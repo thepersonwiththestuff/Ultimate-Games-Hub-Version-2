@@ -1,6 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+
+
+
+
+
+<script>
+    // Function to open links in a new tab with an iframe
+    function openLinkInIframe(url) {
+        var win = window.open();
+        win.document.body.style.margin = '0';
+        win.document.body.style.height = '100vh';
+        var iframe = win.document.createElement('iframe');
+        iframe.style.border = 'none';
+        iframe.style.width = '100%';
+        iframe.style.height = '100%';
+        iframe.style.margin = '0';
+        iframe.src = url;
+        win.document.body.appendChild(iframe);
+    }
+
+    // Function to attach click event to all anchor tags
+    function attachLinkHandlers() {
+        var links = document.querySelectorAll('a[href]');
+        links.forEach(function(link) {
+            link.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default link behavior
+                var url = this.getAttribute('href'); // Get the URL from the href attribute
+                openLinkInIframe(url); // Open the link in a new tab with an iframe
+            });
+        });
+    }
+
+    // Attach the event handlers when the DOM is fully loaded
+    document.addEventListener('DOMContentLoaded', attachLinkHandlers);
+</script>
+
+
+
+
+
+	    
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2617873517669179"
                 crossorigin="anonymous"></script>
     <style>body {    
