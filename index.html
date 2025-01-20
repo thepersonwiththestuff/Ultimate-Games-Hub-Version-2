@@ -58,10 +58,8 @@
         }
         </script>
 	      <script>
-        function openRandomPage() {
-            // Array of your page paths
+       function openRandomPage() {
             const pages = [
-                const pages = [
     "/1",
     "/10minutestilldawn",
     "/2048",
@@ -226,16 +224,17 @@
     "/yohoho"
 ];
 
-            ];
+            // Check if there are any pages to choose from
+            if (pages.length === 0) {
+                alert("No pages available to open.");
+                return;
+            }
 
-            // Generate a random index
+
             const randomIndex = Math.floor(Math.random() * pages.length);
 
-            // Construct the full URL
-            const randomPage = "https://stealth-laylow.netlify.app" + pages[randomIndex];
 
-            // Set the href of the anchor element
-            document.getElementById("randomPageLink").href = randomPage;
+            window.location.href = pages[randomIndex];
         }
     </script>
     </head>
@@ -248,9 +247,7 @@
 	  <a href="javascript:qwerty()">Webretro</a>
           <br><br>
 	  <h3 style="color: #12e007;">Games</h3>
-	  <br><br>
-	  <a id="randomPageLink" href="#" onclick="openRandomPage(); return false;">Random Game</a>
-	  <br><br>
+	  <a href="#" onclick="openRandomPage(); return false;">Open Random Page</a>	  <br><br>
           <a href="1">1</a>
           <br><br>
           <a href="1v1.lol">1v1.LOL</a>
