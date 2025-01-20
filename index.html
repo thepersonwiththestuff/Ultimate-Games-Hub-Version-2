@@ -5,11 +5,6 @@
     // Function to open links in a new tab with an iframe
     function openLinkInIframe(url) {
         var win = window.open();
-        win.document.title = 'Home'; // Set the title of the new tab
-
-        // Set the favicon directly
-        win.document.head.innerHTML += '<link rel="icon" type="image/png" href="path/to/your/favicon.png">';
-
         win.document.body.style.margin = '0';
         win.document.body.style.height = '100vh';
         var iframe = win.document.createElement('iframe');
