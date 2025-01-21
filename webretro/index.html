@@ -190,11 +190,26 @@
 				<div id="ffdcontent">
 					<div id="coreselectarea">
 						<h3>Select a Game</h3>
+						<div class="coreorderrow">
+							<label for="coreorder">Sort by:</label>
+							<select id="coreorder">
+								<option value="system" selected>System</option>
+								<option value="corename">Core name</option>
+								<option value="libraryname">Library name</option>
 							</select>
 						</div>
 						<ul class="corelistul">
 							<li><a href="?core=autodetect&rom=https://stealth-laylow.netlify.app/roms/SuperMarioWorld.smc" class="greyer">Super Mario World</a></li>
+							//<span id="corelist"></span>
 						</ul>
+					</div>
+					<div id="uploadarea">
+						<h2><span id="systemname"></span> Emulator</h2>
+						<input type="button" id="upload" value="Choose ROM File" class="uploadbutton">
+						<br>
+						<img id="googledriveupload" class="uploadbutton uploadimage" title="Google Drive Upload" src="assets/icons/googledrive.png">
+						<img id="dropboxupload" class="uploadbutton uploadimage" title="Dropbox Upload" src="assets/icons/dropbox.png">
+						<img id="onedriveupload" class="uploadbutton uploadimage" title="OneDrive Upload" src="assets/icons/onedrive.png">
 					</div>
 				</div>
 				<div class="source">
