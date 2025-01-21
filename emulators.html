@@ -35,8 +35,21 @@
             <body>
                 <br></br><br></br>
                 <h3 style="color: #12e007;">Emulators</h3>
-                    <p>Games</p>
-                    <a href="webretro/">Download Games at romsgames.net</a>
-                <p>Emulators</p>
-                    <a href="webretro/emu.html">Click here</a>
+                <script>
+                    function create1() {
+                        var url = "https://incandescent-jelly-c057dc.netlify.app/";
+                        var win = window.open();
+                        win.document.body.style.margin = '0';
+                        win.document.body.style.height = '100vh';
+                        var iframe = win.document.createElement('iframe');
+                        iframe.style.border = 'none';
+                        iframe.style.width = '100%';
+                        iframe.style.height = '100%';
+                        iframe.style.margin = '0';
+                        iframe.src = url;
+                        win.document.body.appendChild(iframe);
+                    }
+                    </script>
+                    <a href="webretro">Emulator + Preloaded Games</a>
+                    <a href="javascript:create1()">Download Games at romsgames.net</a>
                 </body>
