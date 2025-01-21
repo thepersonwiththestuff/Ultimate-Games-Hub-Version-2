@@ -1,0 +1,83 @@
+/* General Styles */
+body {
+    background-color: #000000; /* Black background */
+    color: #12e007; /* Green text */
+    font-family: 'Inter', sans-serif; /* Font family */
+    margin: 0;
+    padding: 20px; /* Add padding to the body */
+}
+
+/* Header Styles */
+header {
+    padding: 20px;
+    text-align: center; /* Center the header content */
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: center; /* Center the tabs */
+    background-color: #000000; /* Black background for the navbar */
+    border-bottom: 2px solid #12e007; /* Green border at the bottom */
+}
+
+.navbar li {
+    margin: 0; /* Remove margin */
+}
+
+.navbar a {
+    display: block; /* Make the link a block element */
+    padding: 15px 20px; /* Padding for the tabs */
+    color: #12e007; /* Green text for links */
+    text-decoration: none; /* Remove underline */
+    border: 2px solid #12e007; /* Green border */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.navbar a:hover {
+    background-color: #000000; /* Darker green on hover */
+    color: #035e00; /* Change text color to white on hover */
+}
+
+.navbar a:active {
+    background-color: #000000; /* Dark gray when clicked */
+    color: #12e007; /* Green text when clicked */
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px; /* Add padding to the main content */
+    text-align: center; /* Center align text */
+}
+
+/* Centering h1 Elements */
+h1 {
+    color: #12e007; /* Ensure h1 text is green */
+    text-align: center;
+}
+
+h1 {
+    color: #12e007; /* Ensure h3 text is green */
+    padding: 20px;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    border-top: 2px solid #12e007; /* Green border at the top */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+a {
+    color: #12e007;
+  }
+
+  a:hover {
+    color: #036600;
+  }

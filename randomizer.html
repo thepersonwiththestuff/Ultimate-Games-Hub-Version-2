@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            body {    
+            background-color: black;
+            }  
+            </style>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Game Randomizer</title>
+          <style>
+            body {
+              font-family: Arial, sans-serif;
+              text-align: center;
+              margin-top: 50px;
+            }
+            .random-value {
+              font-size: 2rem;
+              font-weight: bold;
+              padding: 20px;
+              border: 2px solid #000000;
+              display: inline-block;
+              margin-top: 20px;
+            }
+            a {
+              text-decoration: none;
+              color: #12e007;
+              font-weight: bold;
+            }
+            a:hover {
+              color: #036600;
+            }
+          </style>
+        </head>
+        <body>
+        
+          <h1>Game Randomizer</h1>
+          <div class="random-value" id="random-value">Starting...</div>
+          <button onclick="startRandomizer()">Start Randomizing</button>
+        
+          <script>
+            const gamePaths = [
+              "/1",
+              "/10minutestilldawn",
+              "/2048",
+              "/abandoned-2",
+              "/adanceoffireandice",
+              "/adarkroom",
+              "/adrenalinechallenge",
+              "/adventuredrivers",
+              "/ages-of-conflict",
+              "/another-gentlemans-adventure",
+              "/asteroids",
+              "/astray",
+              "/awesome-tanks",
+              "/awesome-tanks-2",
+              "/babel-tower",
+              "/backcountry",
+              "/badicecream",
+              "/badicecream2",
+              "/badicecream3",
+              "/basketball-stars",
+              "/basketrandom",
+              "/bitlife",
+              "/blockblast",
+              "/blosics",
+              "/bounceback",
+              "/boxingrandom",
+              "/brawl-stars-project-laser",
+              "/breaklock",
+              "/breakout",
+              "/chess",
+              "/chromedino",
+              "/clicker-heroes-updated",
+              "/connect3",
+              "/conways-game-of-life",
+              "/cookieclicker",
+              "/core-ball",
+              "/crossy-road",
+              "/cubefield",
+              "/cut-the-rope",
+              "/dadish",
+              "/dadish-2",
+              "/dadish-3",
+              "/doge-miner",
+              "/doodlejump",
+              "/drift-boss",
+              "/drive-mad",
+              "/ducklife",
+              "/ducklife2",
+              "/ducklife3",
+              "/ducklife4",
+              "/dune",
+              "/edgesurf",
+              "/evilglitch",
+              "/evowars",
+              "/factoryballsforever",
+              "/Fancy-Pants-Adventure-World1",
+              "/fireboy-and-watergirl",
+              "/fireboy-and-watergirl-2",
+              "/fireboy-and-watergirl-3",
+              "/fireboy-and-watergirl-4",
+              "/fireboyandwatergirlintheforesttemple",
+              "/flappybird",
+              "/flash",
+              "/friday-night-funkin",
+              "/friendlyfire",
+              "/geometrydash",
+              "/getaway-shootout",
+              "/gons-io",
+              "/gopherkart",
+              "/gunspin",
+              "/hs-breaking-the-bank",
+              "/hs-escaping-the-prison",
+              "/hs-stealing-the-diamond",
+              "/hs-infiltrating-the-airship",
+              "/hs-fleeing-the-complex",
+              "/hextris",
+              "/iceagebabyadventure",
+              "/idle-breakout",
+              "/incremancer",
+              "/jumpingfrogspuzzle",
+              "/konnekt",
+              "/maptroid",
+              "/mario-game",
+              "/minecraft0.30",
+              "/minecraft1.3",
+              "/minecraft1.5.2",
+              "/monkey-mart",
+              "/motox3m",
+              "/motox3m2",
+              "/n-gon",
+              "/n-step-steve-part-1",
+              "/n-step-steve-part-2",
+              "/ovo",
+              "/pacman",
+              "/particle-clicker",
+              "/pcraft",
+              "/planet-life",
+              "/precision-client",
+              "/progress-knight-quest",
+              "/progress-knight-reborn",
+              "/pull-of-war",
+              "/pushback",
+              "/racer",
+              "/radiusraid",
+              "/reach-the-core",
+              "/restless-wing-syndrome",
+              "/retrobowl",
+              "/retrohaunt",
+              "/riddleschool",
+              "/riddleschool2",
+              "/riddleschool3",
+              "/riddleschool4",
+              "/riddleschool5",
+              "/rift-shift",
+              "/roadblocks",
+              "/rooftop-snipers",
+              "/rookie-bowman",
+              "/run-3",
+              "/sandspiel",
+              "/scuba-gear",
+              "/sleepingbeauty",
+              "/slope",
+              "/smart-ball",
+              "/smash-karts",
+              "/snake",
+              "/snowrider3d",
+              "/soccerrandom",
+              "/spacecompany",
+              "/spaceinvaders",
+              "/stickman-hook",
+              "/subway-surfers",
+              "/subway-surfers-ny",
+              "/tanuki-sunset",
+              "/temple-run-2",
+              "/tetris",
+              "/thechromaincident",
+              "/the-final-earth",
+              "/thereisnogame",
+              "/the-treasure",
+              "/time-shooter",
+              "/time-shooter-3",
+              "/tiny-fishing",
+              "/towermaster",
+              "/trace",
+              "/tunnelrush",
+              "/two-ball-3d",
+              "/underrun",
+              "/vex3",
+              "/vex4",
+              "/vex5",
+              "/vex6",
+              "/vex7",
+              "/volleyrandom",
+              "/w-flash",
+              "/where-is-the-water",
+              "/worldshardestgame",
+              "/worldshardestgame2",
+              "/x-trench-run",
+              "/xx142b2.exe",
+              "/yohoho"
+            ];
+        
+            // Function to generate a random index using crypto
+            function getRandomIndex() {
+              const array = new Uint32Array(1);
+              window.crypto.getRandomValues(array);
+              return array[0] % gamePaths.length;
+            }
+        
+            // Function to open the link in an iframe in a new tab
+            function openLinkInIframe(url) {
+              var win = window.open();
+              win.document.body.style.margin = '0';
+              win.document.body.style.height = '100vh';
+              var iframe = win.document.createElement('iframe');
+              iframe.style.border = 'none';
+              iframe.style.width = '100%';
+              iframe.style.height = '100%';
+              iframe.style.margin = '0';
+              iframe.src = url;
+              win.document.body.appendChild(iframe);
+            }
+        
+            function startRandomizer() {
+              const randomValueElement = document.getElementById('random-value');
+              const startTime = Date.now();
+        
+              let intervalId = setInterval(() => {
+                const randomIndex = getRandomIndex();  // Use crypto-based random index
+                const currentPath = gamePaths[randomIndex];
+                const displayName = currentPath.replace(/^\/|\/$/g, '');  // Remove slashes for display
+        
+                // Make the value clickable
+                randomValueElement.innerHTML = `<a href="#" onclick="openLinkInIframe('https://stealth-laylow.netlify.app${currentPath}')">${displayName}</a>`;
+        
+              }, 50); // Flip every 50ms
+        
+              // Stop after 3 seconds
+              setTimeout(() => {
+                clearInterval(intervalId);
+                const finalPath = gamePaths[getRandomIndex()];
+                const displayName = finalPath.replace(/^\/|\/$/g, '');  // Remove slashes for display
+                randomValueElement.innerHTML = `<a href="#" onclick="openLinkInIframe('https://stealth-laylow.netlify.app${finalPath}')">${displayName}</a>`;
+              }, 3000);  // Stop after 3 seconds (3000ms)
+            }
+          </script>
+        
+        </body>
+        </html>
+         </head>
