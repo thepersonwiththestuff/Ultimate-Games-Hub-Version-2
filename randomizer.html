@@ -253,7 +253,7 @@
                 const finalPath = gamePaths[getRandomIndex()];
                 const displayName = finalPath.replace(/^\/|\/$/g, '');  // Remove slashes for display
                 randomValueElement.innerHTML = `<a href="#" onclick="openLinkInIframe('https://stealth-laylow.netlify.app${finalPath}')">${displayName}</a>`;
-              }, 3000);  // Stop after 3 seconds (3000ms)
+              }, 1500);  // Stop after 3 seconds (3000ms)
             }
           </script>
         
