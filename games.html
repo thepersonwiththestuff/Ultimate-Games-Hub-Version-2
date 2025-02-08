@@ -65,8 +65,49 @@
         </ul>
     </nav>
 </head>
+<br></br>
 <body>
-<br></br><br></br>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .search-container {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border: 1px solid;
+            border-radius: 5px;
+            width: 300px;
+            margin: 20px auto;
+        }
+        input {
+            flex: 1;
+            padding: 5px;
+            border: none;
+            outline: none;
+        }
+        button {
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search...">
+        <button onclick="searchText()">Find</button>
+    </div>
+    <script>
+        function searchText() {
+            let query = document.getElementById("searchInput").value;
+            if (query) {
+                window.find(query);
+            }
+        }
+    </script>
+<br></br>
 <h3 style="color: #12e007;">Games</h3>
 <a href="1" class="game-link">1</a>
 <br><br>
@@ -78,7 +119,7 @@
 <br><br>
 <a href="abandoned-2" class="game-link">Abandoned 2</a>
 <br><br>
-<a href="achievementunlocked" class="game-link">Achievement Unlocked</a>
+<a href="achievementunlocked" class="game-link">Achievement Unlocked *NEW*</a>
 <br><br>
 <a href="adanceoffireandice" class="game-link">A Dance of Fire And Ice</a>
 <br><br>
@@ -90,17 +131,17 @@
 <br><br>
 <a href="ages-of-conflict" class="game-link">Ages of Conflict</a>
 <br><br>
-<a href="ageofwar" class="game-link">Age of War</a>
+<a href="ageofwar" class="game-link">Age of War *NEW*</a>
 <br><br>
 <a href="another-gentlemans-adventure" class="game-link">Another Gentleman's Adventure</a>
 <br><br>
-<a href="artofwar" class="game-link">Art of War</a>
+<a href="artofwar" class="game-link">Art of War *NEW*</a>
 <br><br>
 <a href="asteroids" class="game-link">Asteroids</a>
 <br><br>
 <a href="astray" class="game-link">Astray</a>
 <br><br>
-<a href="avalanche" class="game-link">Avalanche</a>
+<a href="avalanche" class="game-link">Avalanche *NEW*</a>
 <br><br>
 <a href="awesome-tanks" class="game-link">Awesome Tanks</a>
 <br><br>
@@ -124,11 +165,11 @@
 <br><br>
 <a href="blockblast" class="game-link">Block Blast</a>
 <br><br>
-<a href="bloons" class="game-link">Bloons</a>
+<a href="bloons" class="game-link">Bloons *NEW*</a>
 <br><br>
-<a href="bloonstd1" class="game-link">Bloons TD 1</a>
+<a href="bloonstd1" class="game-link">Bloons TD 1 *NEW*</a>
 <br><br>
-<a href="bloonstd2" class="game-link">Bloons TD 2</a>
+<a href="bloonstd2" class="game-link">Bloons TD 2 *NEW*</a>
 <br><br>
 <a href="blosics" class="game-link">Blosics</a>
 <br><br>
@@ -214,7 +255,7 @@
 <br><br>
 <a href="flappybird" class="game-link">Flappy Bird</a>
 <br><br>
-<a href="flashsonic" class="game-link">Flash Sonic</a>
+<a href="flashsonic" class="game-link">Flash Sonic *NEW*</a>
 <br><br>
 <a href="FNAF1" class="game-link">FNAF 1</a>
 <br><br>
@@ -262,21 +303,21 @@
 <br><br>
 <a href="idle-breakout" class="game-link">Idle Breakout</a>
 <br><br>
-<a href="incremancer" class="game-link">Incremancer</a>
+<a href="incremancer" class="game-link">Incremancer *NEW*</a>
 <br><br>
-<a href="interactivebuddy" class="game-link">Interactive Buddy</a>
+<a href="interactivebuddy" class="game-link">Interactive Buddy *NEW*</a>
 <br><br>
 <a href="jumpingfrogspuzzle" class="game-link">Jumping frogs puzzle</a>
 <br><br>
 <a href="konnekt" class="game-link">Konnekt</a>
 <br><br>
-<a href="learntofly" class="game-link">Learn to Fly</a>
+<a href="learntofly" class="game-link">Learn to Fly *NEW*</a>
 <br><br>
 <a href="maptroid" class="game-link">Maptroid</a>
 <br><br>
 <a href="mario-game" class="game-link">Mario Game</a>
 <br><br>
-<a href="mariokartflash" class="game-link">Mariokart Flash</a>
+<a href="mariokartflash" class="game-link">Mariokart Flash *NEW*</a>
 <br><br>
 <a href="minecraft0.30" class="game-link">Minecraft 0.30</a>
 <br><br>
@@ -284,11 +325,11 @@
 <br><br>
 <a href="minecraft1.5.2" class="game-link">Minecraft 1.5.2</a>
 <br><br>
-<a href="minecrafttd" class="game-link">Minecraft TD</a>
+<a href="minecrafttd" class="game-link">Minecraft TD *NEW*</a>
 <br><br>
-<a href="minesweeper" class="game-link">Minesweeper</a>
+<a href="minesweeper" class="game-link">Minesweeper *NEW*</a>
 <br><br>
-<a href="motherload" class="game-link">Motherload</a>
+<a href="motherload" class="game-link">Motherload *NEW*</a>
 <br><br>
 <a href="monkey-mart" class="game-link">Monkey Mart</a>
 <br><br>
@@ -296,7 +337,7 @@
 <br><br>
 <a href="motox3m2" class="game-link">Moto X3M 2</a>
 <br><br>
-<a href="n" class="game-link">N</a>
+<a href="n" class="game-link">N *NEW*</a>
 <br><br>
 <a href="n-gon" class="game-link">N-Gon</a>
 <br><br>
@@ -306,11 +347,13 @@
 <br><br>
 <a href="ovo" class="game-link">OvO</a>
 <br><br>
+<a href="oregontrail" class="game-link">Oregon Trail *NEW*</a>
+<br><br>
 <a href="pacman" class="game-link">Pac-Man</a>
 <br><br>
 <a href="pandemic1" class="game-link">Pandemic 1</a>
 <br><br>
-<a href="pandemic2" class="game-link">Pandemic 2</a>
+<a href="pandemic2" class="game-link">Pandemic 2 *NEW*</a>
 <br><br>
 <a href="particle-clicker" class="game-link">Particle Clicker</a>
 <br><br>
@@ -332,7 +375,7 @@
 <br><br>
 <a href="pushback" class="game-link">Pushback</a>
 <br><br>
-<a href="qwop" class="game-link">QWOP</a>
+<a href="qwop" class="game-link">QWOP *NEW*</a>
 <br><br>
 <a href="racer" class="game-link">Racer</a>
 <br><br>
@@ -343,6 +386,8 @@
 <a href="restless-wing-syndrome" class="game-link">Restless Wing Syndrome</a>
 <br><br>
 <a href="retrobowl" class="game-link">Retro Bowl</a>
+<br><br>
+<a href="retrobowlcollege" class="game-link">Retro Bowl College *NEW*</a>
 <br><br>
 <a href="retrohaunt" class="game-link">Retrohaunt</a>
 <br><br>
@@ -368,7 +413,7 @@
 <br><br>
 <a href="rookie-bowman" class="game-link">Rookie Bowman</a>
 <br><br>
-<a href="rubikscube" class="game-link">Rubiks Cube</a>
+<a href="rubikscube" class="game-link">Rubiks Cube *NEW*</a>
 <br><br>
 <a href="run-3" class="game-link">Run 3</a>
 <br><br>
@@ -376,7 +421,7 @@
 <br><br>
 <a href="scuba-gear" class="game-link">Scuba Gear</a>
 <br><br>
-<a href="shoppingcarthero" class="game-link">Shopping Cart Hero</a>
+<a href="shoppingcarthero" class="game-link">Shopping Cart Hero *NEW*</a>
 <br><br>
 <a href="sleepingbeauty" class="game-link">Sleeping Beauty</a>
 <br><br>
@@ -402,17 +447,17 @@
 <br><br>
 <a href="stormthehouse1" class="game-link">Storm the House 1</a>
 <br><br>
-<a href="stormthehouse2" class="game-link">Storm the House 2</a>
+<a href="stormthehouse2" class="game-link">Storm the House 2 *NEW*</a>
 <br><br>
 <a href="subway-surfers" class="game-link">Subway Surfers</a>
 <br><br>
 <a href="subway-surfers-ny" class="game-link">Subway Surfers NY</a>
 <br><br>
-<a href="supermario63" class="game-link">Super Mario 63</a>
+<a href="supermario63" class="game-link">Super Mario 63 *NEW*</a>
 <br><br>
-<a href="supermeatboy" class="game-link">Super Meat Boy</a>
+<a href="supermeatboy" class="game-link">Super Meat Boy *NEW*</a>
 <br><br>
-<a href="supersmashflash" class="game-link">Super Smash Flash</a>
+<a href="supersmashflash" class="game-link">Super Smash Flash *NEW*</a>
 <br><br>
 <a href="tanuki-sunset" class="game-link">Tanuki Sunset</a>
 <br><br>
@@ -438,7 +483,7 @@
 <br><br>
 <a href="trace" class="game-link">Trace</a>
 <br><br>
-<a href="tron" class="game-link">Tron</a>
+<a href="tron" class="game-link">Tron *NEW*</a>
 <br><br>
 <a href="tunnelrush" class="game-link">Tunnel Rush</a>
 <br><br>
