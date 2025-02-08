@@ -7,6 +7,40 @@ body {
     padding: 20px; /* Add padding to the body */
 }
 
+        .search-container {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-radius: 5px;
+            width: 300px;
+            margin: 20px auto;
+            position: relative;
+            transition: position 0.3s ease-in-out;
+            background: black;
+        }
+        .sticky {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+        }
+        input {
+            flex: 1;
+            padding: 5px;
+            border: 1px solid #12e007;
+            outline: none;
+            background: black;
+            color: #12e007;
+        }
+        button {
+            padding: 5px 10px;
+            border: 1px solid #12e007;
+            cursor: pointer;
+            border-radius: 3px;
+            background: black;
+            color: #12e007;
+        }
 /* Header Styles */
 header {
     padding: 20px;

@@ -67,41 +67,7 @@
 </head>
 <br></br>
 <body>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .search-container {
-            display: flex;
-            align-items: center;
-            padding: 10px;
-            border: 1px solid;
-            border-radius: 5px;
-            width: 300px;
-            position: fixed;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1000;
-        }
-        input {
-            flex: 1;
-            padding: 5px;
-            border: none;
-            outline: none;
-        }
-        button {
-            padding: 5px 10px;
-            border: none;
-            cursor: pointer;
-            border-radius: 3px;
-        }
-    </style>
-</head>
-<body>
-    <div class="search-container">
+    <div id="searchBar" class="search-container">
         <input type="text" id="searchInput" placeholder="Search...">
         <button onclick="searchText()">Find</button>
     </div>
@@ -112,6 +78,16 @@
                 window.find(query);
             }
         }
+
+        window.addEventListener("scroll", function() {
+            let searchBar = document.getElementById("searchBar");
+            let offset = searchBar.offsetTop;
+            if (window.pageYOffset > offset) {
+                searchBar.classList.add("sticky");
+            } else {
+                searchBar.classList.remove("sticky");
+            }
+        });
     </script>
 <br></br>
 <h3 style="color: #12e007;">Games</h3>
@@ -119,7 +95,7 @@
 <br><br>
 <a href="https://teaching-30.pro/lesson-detail/lesson-244.html#google_vignette" class="game-link">1v1.lol</a>
 <br><br>
-<a href="10minutestilldawn" class="game-link">10 Minutes Till Dawn</a>
+<a href="10minutestilldawn" class="game-link">10 Minutes Till Dawn *FUN*</a>
 <br><br>
 <a href="2048" class="game-link">2048</a>
 <br><br>
@@ -127,7 +103,7 @@
 <br><br>
 <a href="achievementunlocked" class="game-link">Achievement Unlocked *NEW*</a>
 <br><br>
-<a href="adanceoffireandice" class="game-link">A Dance of Fire And Ice</a>
+<a href="adanceoffireandice" class="game-link">A Dance of Fire And Ice  *FUN*</a>
 <br><br>
 <a href="adarkroom" class="game-link">A Dark Room</a>
 <br><br>
@@ -153,7 +129,7 @@
 <br><br>
 <a href="awesome-tanks-2" class="game-link">Awesome Tanks 2</a>
 <br><br>
-<a href="babel-tower" class="game-link">Babel Tower</a>
+<a href="babel-tower" class="game-link">Babel Tower *FUN*</a>
 <br><br>
 <a href="backcountry" class="game-link">Backcountry</a>
 <br><br>
@@ -175,9 +151,9 @@
 <br><br>
 <a href="bloonstd1" class="game-link">Bloons TD 1 *NEW*</a>
 <br><br>
-<a href="bloonstd2" class="game-link">Bloons TD 2 *NEW*</a>
+<a href="bloonstd2" class="game-link">Bloons TD 2 *NEW* *FUN*</a>
 <br><br>
-<a href="blosics" class="game-link">Blosics</a>
+<a href="blosics" class="game-link">Blosics *FUN*</a>
 <br><br>
 <a href="bloxorz" class="game-link">Bloxorz</a>
 <br><br>
@@ -211,7 +187,7 @@
 <br><br>
 <a href="crossy-road" class="game-link">Crossy Road</a>
 <br><br>
-<a href="cubefield" class="game-link">Cubefield</a>
+<a href="cubefield" class="game-link">Cubefield *FUN*</a>
 <br><br>
 <a href="cut-the-rope" class="game-link">Cut the Rope</a>
 <br><br>
@@ -293,15 +269,15 @@
 <br><br>
 <a href="gunspin" class="game-link">Gunspin</a>
 <br><br>
-<a href="hs-breaking-the-bank" class="game-link">Henry Stickmin Breaking the Bank</a>
+<a href="hs-breaking-the-bank" class="game-link">Henry Stickmin Breaking the Bank *FUN*</a>
 <br><br>
-<a href="hs-escaping-the-prison" class="game-link">Henry Stickmin Escaping the Prison</a>
+<a href="hs-escaping-the-prison" class="game-link">Henry Stickmin Escaping the Prison *FUN*</a>
 <br><br>
-<a href="hs-stealing-the-diamond" class="game-link">Henry Stickmin Stealing the Diamond</a>
+<a href="hs-stealing-the-diamond" class="game-link">Henry Stickmin Stealing the Diamond *FUN*</a>
 <br><br>
-<a href="hs-infiltrating-the-airship" class="game-link">Henry Stickmin Infiltrating the Airship</a>
+<a href="hs-infiltrating-the-airship" class="game-link">Henry Stickmin Infiltrating the Airship *FUN*</a>
 <br><br>
-<a href="hs-fleeing-the-complex" class="game-link">Henry Stickmin Fleeing the Complex</a>
+<a href="hs-fleeing-the-complex" class="game-link">Henry Stickmin Fleeing the Complex *FUN*</a>
 <br><br>
 <a href="hextris" class="game-link">Hextris</a>
 <br><br>
@@ -317,7 +293,7 @@
 <br><br>
 <a href="konnekt" class="game-link">Konnekt</a>
 <br><br>
-<a href="learntofly" class="game-link">Learn to Fly *NEW*</a>
+<a href="learntofly" class="game-link">Learn to Fly *NEW* *FUN*</a>
 <br><br>
 <a href="maptroid" class="game-link">Maptroid</a>
 <br><br>
@@ -353,13 +329,13 @@
 <br><br>
 <a href="ovo" class="game-link">OvO</a>
 <br><br>
-<a href="oregontrail" class="game-link">Oregon Trail *NEW*</a>
+<a href="oregontrail" class="game-link">Oregon Trail *NEW* *FUN*</a>
 <br><br>
 <a href="pacman" class="game-link">Pac-Man</a>
 <br><br>
 <a href="pandemic1" class="game-link">Pandemic 1</a>
 <br><br>
-<a href="pandemic2" class="game-link">Pandemic 2 *NEW*</a>
+<a href="pandemic2" class="game-link">Pandemic 2 *NEW* *FUN*</a>
 <br><br>
 <a href="particle-clicker" class="game-link">Particle Clicker</a>
 <br><br>
@@ -369,7 +345,7 @@
 <br><br>
 <a href="planet-life" class="game-link">Planet Life</a>
 <br><br>
-<a href="portalflash" class="game-link">Portal Flash</a>
+<a href="portalflash" class="game-link">Portal Flash *FUN*</a>
 <br><br>
 <a href="precision-client" class="game-link">Precision Client</a>
 <br><br>
@@ -389,7 +365,7 @@
 <br><br>
 <a href="reach-the-core" class="game-link">Reach the Core</a>
 <br><br>
-<a href="restless-wing-syndrome" class="game-link">Restless Wing Syndrome</a>
+<a href="restless-wing-syndrome" class="game-link">Restless Wing Syndrome *FUN*</a>
 <br><br>
 <a href="retrobowl" class="game-link">Retro Bowl</a>
 <br><br>
@@ -397,19 +373,19 @@
 <br><br>
 <a href="retrohaunt" class="game-link">Retrohaunt</a>
 <br><br>
-<a href="riddleschool" class="game-link">Riddle School</a>
+<a href="riddleschool" class="game-link">Riddle School *FUN*</a>
 <br><br>
-<a href="riddleschool2" class="game-link">Riddle School 2</a>
+<a href="riddleschool2" class="game-link">Riddle School 2 *FUN*</a>
 <br><br>
-<a href="riddleschool3" class="game-link">Riddle School 3</a>
+<a href="riddleschool3" class="game-link">Riddle School 3 *FUN*</a>
 <br><br>
-<a href="riddleschool4" class="game-link">Riddle School 4</a>
+<a href="riddleschool4" class="game-link">Riddle School 4 *FUN*</a>
 <br><br>
-<a href="riddleschool5" class="game-link">Riddle School 5</a>
+<a href="riddleschool5" class="game-link">Riddle School 5 *FUN*</a>
 <br><br>
-<a href="riddleschooltransfer" class="game-link">Riddle School Transfer</a>
+<a href="riddleschooltransfer" class="game-link">Riddle School Transfer *FUN*</a>
 <br><br>
-<a href="riddleschooltransfer2" class="game-link">Riddle School Transfer 2</a>
+<a href="riddleschooltransfer2" class="game-link">Riddle School Transfer 2 *FUN*</a>
 <br><br>
 <a href="rift-shift" class="game-link">Rift Shift</a>
 <br><br>
@@ -427,7 +403,7 @@
 <br><br>
 <a href="scuba-gear" class="game-link">Scuba Gear</a>
 <br><br>
-<a href="shoppingcarthero" class="game-link">Shopping Cart Hero *NEW*</a>
+<a href="shoppingcarthero" class="game-link">Shopping Cart Hero *NEW* *FUN*</a>
 <br><br>
 <a href="sleepingbeauty" class="game-link">Sleeping Beauty</a>
 <br><br>
@@ -451,9 +427,9 @@
 <br><br>
 <a href="stickrpg" class="game-link">Stick RPG</a>
 <br><br>
-<a href="stormthehouse1" class="game-link">Storm the House 1</a>
+<a href="stormthehouse" class="game-link">Storm the House *FUN*</a>
 <br><br>
-<a href="stormthehouse2" class="game-link">Storm the House 2 *NEW*</a>
+<a href="stormthehouse2" class="game-link">Storm the House 2 *NEW* *FUN*</a>
 <br><br>
 <a href="subway-surfers" class="game-link">Subway Surfers</a>
 <br><br>
@@ -491,15 +467,15 @@
 <br><br>
 <a href="tron" class="game-link">Tron *NEW*</a>
 <br><br>
-<a href="tunnelrush" class="game-link">Tunnel Rush</a>
+<a href="tunnelrush" class="game-link">Tunnel Rush *FUN*</a>
 <br><br>
 <a href="two-ball-3d" class="game-link">Two Ball 3D</a>
 <br><br>
 <a href="underrun" class="game-link">Under Run</a>
 <br><br>
-<a href="unfairmario" class="game-link">Unfair Mario</a>
+<a href="unfairmario" class="game-link">Unfair Mario *NEW* *FUN*</a>
 <br><br>
-<a href="vex3" class="game-link">Vex 3</a>
+<a href="vex3" class="game-link">Vex 3 *FUN*</a>
 <br><br>
 <a href="vex4" class="game-link">Vex 4</a>
 <br><br>
@@ -515,9 +491,9 @@
 <br><br>
 <a href="where-is-the-water" class="game-link">Where is the Water</a>
 <br><br>
-<a href="worldshardestgame" class="game-link">World's Hardest Game</a>
+<a href="worldshardestgame" class="game-link">World's Hardest Game *FUN*</a>
 <br><br>
-<a href="worldshardestgame2" class="game-link">World's Hardest Game 2</a>
+<a href="worldshardestgame2" class="game-link">World's Hardest Game 2 *FUN*</a>
 <br><br>
 <a href="x-trench-run" class="game-link">X-Trench Run</a>
 <br><br>
