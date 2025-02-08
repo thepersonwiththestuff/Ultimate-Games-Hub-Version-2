@@ -70,6 +70,8 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
         .search-container {
             display: flex;
@@ -78,7 +80,11 @@
             border: 1px solid;
             border-radius: 5px;
             width: 300px;
-            margin: 20px auto;
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
         }
         input {
             flex: 1;
