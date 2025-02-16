@@ -1,0 +1,117 @@
+/* General Styles */
+body {
+    background-color: #000000; /* Black background */
+    color: grey; /* Green text */
+    font-family: 'Inter', sans-serif; /* Font family */
+    margin: 0;
+    padding: 20px; /* Add padding to the body */
+}
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-radius: 5px;
+            width: 300px;
+            margin: 20px auto;
+            position: relative;
+            transition: position 0.3s ease-in-out;
+            background: black;
+        }
+        .sticky {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+        }
+        input {
+            flex: 1;
+            padding: 5px;
+            border: 1px solid grey;
+            outline: none;
+            background: black;
+            color: grey;
+        }
+        button {
+            padding: 5px 10px;
+            border: 1px solid grey;
+            cursor: pointer;
+            border-radius: 3px;
+            background: black;
+            color: grey;
+        }
+/* Header Styles */
+header {
+    padding: 20px;
+    text-align: center; /* Center the header content */
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: center; /* Center the tabs */
+    background-color: #000000; /* Black background for the navbar */
+    border-bottom: 2px solid grey; /* Green border at the bottom */
+}
+
+.navbar li {
+    margin: 0; /* Remove margin */
+}
+
+.navbar a {
+    display: block; /* Make the link a block element */
+    padding: 15px 20px; /* Padding for the tabs */
+    color: grey; /* Green text for links */
+    text-decoration: none; /* Remove underline */
+    border: 2px solid grey; /* Green border */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.navbar a:hover {
+    background-color: #000000; /* Darker green on hover */
+    color: lightgrey; /* Change text color to white on hover */
+}
+
+.navbar a:active {
+    background-color: #000000; /* Dark gray when clicked */
+    color: grey; /* Green text when clicked */
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px; /* Add padding to the main content */
+    text-align: center; /* Center align text */
+}
+
+/* Centering h1 Elements */
+h1 {
+    color: grey; /* Ensure h1 text is green */
+    text-align: center;
+}
+
+h1 {
+    color: grey; /* Ensure h3 text is green */
+    padding: 20px;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    border-top: 2px solid grey; /* Green border at the top */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+a {
+    color: grey;
+  }
+
+  a:hover {
+    color: darkgray;
+  }

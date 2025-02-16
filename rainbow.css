@@ -1,0 +1,169 @@
+/* General Styles */
+body {
+    background-color: #000000; /* Black background */
+    font-family: 'Inter', sans-serif; /* Font family */
+    margin: 0;
+    padding: 20px; /* Add padding to the body */
+    animation: rainbowText 5s linear infinite; /* Rainbow color shift for all text */
+}
+
+@keyframes rainbowText {
+    0% { color: red; }
+    14% { color: orange; }
+    28% { color: yellow; }
+    42% { color: green; }
+    57% { color: blue; }
+    71% { color: indigo; }
+    85% { color: violet; }
+    100% { color: red; }
+}
+
+@keyframes rainbowBorder {
+    0% { border-color: red; }
+    14% { border-color: orange; }
+    28% { border-color: yellow; }
+    42% { border-color: green; }
+    57% { border-color: blue; }
+    71% { border-color: indigo; }
+    85% { border-color: violet; }
+    100% { border-color: red; }
+}
+
+/* Search Container */
+.search-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    width: 300px;
+    margin: 20px auto;
+    position: relative;
+    transition: position 0.3s ease-in-out;
+    background: black;
+    animation: rainbowBorder 5s linear infinite; /* Rainbow border color shift */
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+/* Input Fields */
+input {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid;
+    outline: none;
+    background: black;
+    color: inherit; /* Inherit the rainbow text color */
+    animation: rainbowText 5s linear infinite; /* Rainbow text color shift */
+    border: 1px solid;
+    animation: rainbowBorder 5s linear infinite; /* Rainbow border color shift */
+}
+
+/* Buttons */
+button {
+    padding: 5px 10px;
+    border: 1px solid;
+    cursor: pointer;
+    border-radius: 3px;
+    background: black;
+    color: inherit; /* Inherit the rainbow text color */
+    animation: rainbowText 5s linear infinite; /* Rainbow text color */
+    border: 1px solid;
+    animation: rainbowBorder 5s linear infinite; /* Rainbow border color shift */
+}
+
+button:hover {
+    background-color: #000000; /* Set background to black on hover */
+    color: #fff;
+    border-color: #fff; /* Set border color to white when hovered */
+    animation: none; /* Stop the rainbow animation on hover */
+}
+
+/* Header Styles */
+header {
+    padding: 20px;
+    text-align: center; /* Center the header content */
+    animation: rainbowText 5s linear infinite; /* Rainbow text color for header */
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: center; /* Center the tabs */
+    background-color: #000000; /* Black background for the navbar */
+    border-bottom: 2px solid; /* Rainbow border at the bottom */
+    animation: rainbowBorder 5s linear infinite; /* Rainbow border color shift */
+}
+
+.navbar li {
+    margin: 0; /* Remove margin */
+}
+
+.navbar a {
+    display: block; /* Make the link a block element */
+    padding: 15px 20px; /* Padding for the tabs */
+    color: inherit; /* Inherit the rainbow text color */
+    text-decoration: none; /* Remove underline */
+    border: 2px solid;
+    animation: rainbowText 5s linear infinite; /* Rainbow text color */
+    border: 2px solid;
+    animation: rainbowBorder 5s linear infinite; /* Rainbow border color shift */
+}
+
+.navbar a:hover {
+    background-color: #000000; /* Set background to black on hover */
+    color: #fff; /* White text when hovered */
+    border-color: #fff; /* Set border color to white on hover */
+}
+
+.navbar a:active {
+    background-color: #000000; /* Dark gray when clicked */
+    color: inherit; /* Inherit the rainbow color */
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px; /* Add padding to the main content */
+    text-align: center; /* Center align text */
+    animation: rainbowText 5s linear infinite; /* Rainbow text color for main */
+    border: 2px solid;
+    animation: rainbowBorder 5s linear infinite; /* Rainbow border color shift */
+}
+
+/* Centering h1 Elements */
+h1, h2, h3, h4, h5, h6 {
+    color: inherit; /* Inherit the rainbow text color */
+    text-align: center;
+    animation: rainbowText 5s linear infinite; /* Rainbow text color for all headings */
+    padding: 20px;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    border-top: 2px solid;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    animation: rainbowText 5s linear infinite; /* Rainbow text color for footer */
+    border-top: 2px solid;
+    animation: rainbowBorder 5s linear infinite; /* Rainbow border color shift */
+}
+
+a {
+    color: inherit; /* Inherit the rainbow text color */
+    animation: rainbowText 5s linear infinite; /* Rainbow text color */
+}
+
+a:hover {
+    color: #fff; /* White text on hover */
+}

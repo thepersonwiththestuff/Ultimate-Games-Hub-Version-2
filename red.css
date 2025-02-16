@@ -1,0 +1,137 @@
+/* General Styles */
+body {
+    background-color: #000000; /* Black background */
+    color: #8B0000; /* Dark Red text (same as h1 headings) */
+    font-family: 'Inter', sans-serif; /* Font family */
+    margin: 0;
+    padding: 20px; /* Add padding to the body */
+}
+
+/* Search Container */
+.search-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    width: 300px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+/* Input Fields */
+input {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #800000; /* Dark red border */
+    outline: none;
+    background: #2B0000; /* Very dark red background */
+    color: #8B0000; /* Dark Red text */
+}
+
+input:focus {
+    border-color: #660000; /* Slightly darker red on focus */
+}
+
+/* Buttons */
+button {
+    padding: 5px 10px;
+    border: 1px solid #800000; /* Dark red border */
+    cursor: pointer;
+    border-radius: 3px;
+    background: #000000; /* Black background */
+    color: #800000; /* Dark red text */
+}
+
+button:hover {
+    background-color: #8B0000; /* Dark Red background on hover */
+    color: #FFFFFF; /* White text on hover */
+    border-color: #660000; /* Slightly darker red on hover */
+}
+
+button:active {
+    background-color: #660000; /* Very dark red when clicked */
+    border-color: #800000; /* Dark red border when clicked */
+}
+
+/* Header Styles */
+header {
+    padding: 20px;
+    text-align: center; /* Center the header content */
+    background-color: #8B0000; /* Dark Red background */
+    color: #FFFFFF; /* White text */
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: center; /* Center the tabs */
+    background-color: #000000; /* Black background for the navbar */
+    border-bottom: 2px solid #660000; /* Very dark red border at the bottom */
+}
+
+.navbar li {
+    margin: 0; /* Remove margin */
+}
+
+.navbar a {
+    display: block; /* Make the link a block element */
+    padding: 15px 20px; /* Padding for the tabs */
+    color: #800000; /* Dark red text for links */
+    text-decoration: none; /* Remove underline */
+    border: 2px solid #660000; /* Very dark red border */
+}
+
+.navbar a:hover {
+    background-color: #2B0000; /* Very dark red background on hover */
+    color: #FFFFFF; /* White text on hover */
+}
+
+.navbar a:active {
+    background-color: #660000; /* Very dark red background when clicked */
+    color: #FFFFFF; /* White text when clicked */
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px; /* Add padding to the main content */
+    text-align: center; /* Center align text */
+}
+
+/* Centering h1 Elements */
+h1 {
+    color: #8B0000; /* Dark Red for headings */
+    text-align: center;
+    padding: 20px;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #8B0000; /* Dark Red background */
+    color: #FFFFFF; /* White text */
+    border-top: 2px solid #660000; /* Very dark red border at the top */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Links */
+a {
+    color: #800000; /* Dark red links */
+}
+
+a:hover {
+    color: #660000; /* Very dark red on hover */
+}

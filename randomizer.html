@@ -1,29 +1,42 @@
 <!DOCTYPE html>
+</style>
 <html lang="en">
-  <nav>
-    <ul class="navbar">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="games.html">Games</a></li>
-        <li><a href="emulators.html">Emulators</a></li>
-        <li><a href="randomizer.html">Randomizer</a></li>
-        <li><a href="javascript:create()">Feedback</a></li>
-    </ul>
-</nav>
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css">
-        <style>
-            body {    
-            background-color: black;
-            }  
-            </style>
-          <title>Game Randomizer</title>
+      <link id="stylesheet" rel="stylesheet" href="styles.css">
+      <script src="theme-switcher.js"></script>
+        <script>
+            function create() {
+                var url = "https://forms.gle/XDjeitRYayhEB4FH7";
+                var win = window.open();
+                win.document.body.style.margin = '0';
+                win.document.body.style.height = '100vh';
+                var iframe = win.document.createElement('iframe');
+                iframe.style.border = 'none';
+                iframe.style.width = '100%';
+                iframe.style.height = '100%';
+                iframe.style.margin = '0';
+                iframe.src = url;
+                win.document.body.appendChild(iframe);
+            }
+            </script>
+<div class="heading">
+    <h1>Ultimate Game Hub V3</h1>
+    </div>
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="emulators.html">Emulators</a></li>
+                <li><a href="randomizer.html">Randomizer</a></li>
+                <li><a href="themes.html">Themes</a></li>
+                <li><a href="javascript:create()">Feedback</a></li>
+            </ul>
+        </nav>
+</head>
+            <body>
           <style>
             body {
-              font-family: Arial, sans-serif;
               text-align: center;
-              margin-top: 50px;
             }
             .random-value {
               font-size: 2rem;
@@ -35,18 +48,10 @@
             }
             a {
               text-decoration: none;
-              color: #12e007;
               font-weight: bold;
             }
-            a:hover {
-              color: #036600;
-            }
           </style>
-        </head>
-        <body>
-        
-          <h1>Game Randomizer</h1>
-          <div class="random-value" id="random-value">Starting...</div>
+          <div class="random-value" id="random-value">Click to begin</div>
           <button onclick="startRandomizer()">Start Randomizing</button>
         
           <script>

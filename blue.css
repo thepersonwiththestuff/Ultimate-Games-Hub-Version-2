@@ -1,0 +1,137 @@
+/* General Styles */
+body {
+    background-color: #000000; /* Black background */
+    color: #1E3A8A; /* Dark Blue text */
+    font-family: 'Inter', sans-serif; /* Font family */
+    margin: 0;
+    padding: 20px; /* Add padding to the body */
+}
+
+/* Search Container */
+.search-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    width: 300px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+/* Input Fields */
+input {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #3B82F6; /* Blue border */
+    outline: none;
+    background: #0F172A; /* Very dark blue background */
+    color: #1E3A8A; /* Dark Blue text */
+}
+
+input:focus {
+    border-color: #2563EB; /* Medium blue border on focus */
+}
+
+/* Buttons */
+button {
+    padding: 5px 10px;
+    border: 1px solid #3B82F6; /* Blue border */
+    cursor: pointer;
+    border-radius: 3px;
+    background: #000000; /* Black background */
+    color: #3B82F6; /* Blue text */
+}
+
+button:hover {
+    background-color: #1E3A8A; /* Dark blue background */
+    color: #FFFFFF; /* White text on hover */
+    border-color: #2563EB; /* Medium blue border on hover */
+}
+
+button:active {
+    background-color: #2563EB; /* Medium blue when clicked */
+    border-color: #3B82F6; /* Blue border when clicked */
+}
+
+/* Header Styles */
+header {
+    padding: 20px;
+    text-align: center; /* Center the header content */
+    background-color: #1E3A8A; /* Dark Blue background */
+    color: #FFFFFF; /* White text */
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: center; /* Center the tabs */
+    background-color: #000000; /* Black background for the navbar */
+    border-bottom: 2px solid #3B82F6; /* Blue border at the bottom */
+}
+
+.navbar li {
+    margin: 0; /* Remove margin */
+}
+
+.navbar a {
+    display: block; /* Make the link a block element */
+    padding: 15px 20px; /* Padding for the tabs */
+    color: #3B82F6; /* Blue text for links */
+    text-decoration: none; /* Remove underline */
+    border: 2px solid #3B82F6; /* Blue border */
+}
+
+.navbar a:hover {
+    background-color: #0F172A; /* Very dark blue background on hover */
+    color: #FFFFFF; /* White text on hover */
+}
+
+.navbar a:active {
+    background-color: #3B82F6; /* Medium blue background when clicked */
+    color: #FFFFFF; /* White text when clicked */
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px; /* Add padding to the main content */
+    text-align: center; /* Center align text */
+}
+
+/* Centering h1 Elements */
+h1 {
+    color: #3B82F6; /* Medium blue for headings */
+    text-align: center;
+    padding: 20px;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #1E3A8A; /* Dark Blue background */
+    color: #FFFFFF; /* White text */
+    border-top: 2px solid #3B82F6; /* Blue border at the top */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Links */
+a {
+    color: #3B82F6; /* Medium blue links */
+}
+
+a:hover {
+    color: #2563EB; /* Medium blue links when hovered */
+}
