@@ -39,19 +39,30 @@
                 <li><a href="javascript:create()">Feedback</a></li>
             </ul>
         </nav>
-        <style>
-        .buttons {
-          text-align: center;
-          padding-top: 20px;
-        }
-        </style>
 </head>
-<div class="buttons">
+<script>
+    function create2() {
+        var url = "https://chimerical-klepon-6d3c94.netlify.app/";
+        var win = window.open();
+        var link = win.document.createElement('link');
+            link.rel = 'icon';
+            link.type = 'image/webp';
+            link.href = 'canva.webp';
+            win.document.getElementsByTagName('head')[0].appendChild(link);
+            win.document.title = 'Home - Canva';
+        win.document.body.style.margin = '0';
+        win.document.body.style.height = '100vh';
+        var iframe = win.document.createElement('iframe');
+        iframe.style.border = 'none';
+        iframe.style.width = '100%';
+        iframe.style.height = '100%';
+        iframe.style.margin = '0';
+        iframe.src = url;
+        win.document.body.appendChild(iframe);
+    }
+    </script>
             <body>
-              <button onclick="changeCSS('theme1')">Blue</button>
-              <button onclick="changeCSS('theme2')">Red</button>
-              <button onclick="changeCSS('theme3')">Rainbow</button>
-              <button onclick="changeCSS('theme4')">Discrete</button>
-              <button onclick="changeCSS('theme5')">Default</button>
-                </body>
-              </div>
+                <h3>Proxies</h3>
+                <br>
+                <p>What? Only one proxy! But what if it gets blocked? It won't. I run both the frontend and the server.</p>
+                <button onclick="create2()">Go</button>

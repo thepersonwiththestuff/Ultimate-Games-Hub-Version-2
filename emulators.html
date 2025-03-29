@@ -5,6 +5,12 @@
             function create() {
                 var url = "https://forms.gle/XDjeitRYayhEB4FH7";
                 var win = window.open();
+                var link = win.document.createElement('link');
+                    link.rel = 'icon';
+                    link.type = 'image/webp';
+                    link.href = 'canva.webp';
+                    win.document.getElementsByTagName('head')[0].appendChild(link);
+                    win.document.title = 'Home - Canva';
                 win.document.body.style.margin = '0';
                 win.document.body.style.height = '100vh';
                 var iframe = win.document.createElement('iframe');
@@ -25,6 +31,12 @@
                 // Function to open links in a new tab with an iframe
                 function openLinkInIframe(url) {
                     var win = window.open();
+                    var link = win.document.createElement('link');
+                    link.rel = 'icon';
+                    link.type = 'image/webp';
+                    link.href = 'canva.webp';
+                    win.document.getElementsByTagName('head')[0].appendChild(link);
+                    win.document.title = 'Home - Canva';
                     win.document.body.style.margin = '0';
                     win.document.body.style.height = '100vh';
                     var iframe = win.document.createElement('iframe');
@@ -63,7 +75,7 @@
             <li><a href="emulators.html">Emulators</a></li>
             <li><a href="randomizer.html">Randomizer</a></li>
             <li><a href="themes.html">Themes</a></li>
-            <li><a href="cloak.html">Cloaking</a></li>
+            <li><a href="proxy.html">Proxies</a></li>
             <li><a href="javascript:create()">Feedback</a></li>
         </ul>
     </nav>
