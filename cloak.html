@@ -33,19 +33,19 @@
                 <li><a href="javascript:create()">Feedback</a></li>
             </ul>
         </nav>
-        <style>
-        .buttons {
-          text-align: center;
-          padding-top: 20px;
-        }
-        </style>
 </head>
-<div class="buttons">
+<script>
+    function changeTabIcon() {
+        let link = document.createElement('link');
+        link.rel = 'icon';
+        link.type = 'image/png';
+        link.href = 'ixl.png';
+        document.getElementsByTagName('head').appendChild(link);
+    }
+</script>
             <body>
-              <button onclick="changeCSS('theme1')">Blue</button>
-              <button onclick="changeCSS('theme2')">Red</button>
-              <button onclick="changeCSS('theme3')">Rainbow</button>
-              <button onclick="changeCSS('theme4')">Discrete</button>
-              <button onclick="changeCSS('theme5')">Default</button>
-                </body>
-              </div>
+                <h3>Cloaking</h3>
+                <br>
+                <p>Well, well, well, since some of you think that a nigh untraceable website is not enough because the little favicon doesn't look like IXL, I have reluctantly decided to add a tab favicon and description cloaking function. You're Welcome.</p>
+                <button onclick="changeTabIcon()">IXL</button>
+
