@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="soli.css">
+    <script type="text/javascript" src="soli.js">
+
+
+    </script>
+</head>
+<body id="bodyid" onload="doinitialshuffleAnimation()" >
+<div id ="sidebar">
+   <div  id="Options"  >
+    <div class="resetcard" onclick="ResetGame()" ><div style="position:relative;top:10px;left:8px" >Reset Cards</div>
+        </div>
+    <div class="resetcard"  style="width:140px"><div style="position:relative;top:10px;left:8px" >
+        <input  id="cheatbox" type="checkbox" onclick="cheatschange(event)" >Cheats Enabled</div>
+        </div>
+   
+       <div  class="resetcard" style="width:85px"><div id="movestrack" style="position:relative;top:10px;left:8px" >
+        Moves: 0</div>
+        </div>
+    <div  class="resetcard" style="width:125px"><div id="scoretrack" style="position:relative;top:10px;left:8px" >
+        Score: 0</div>
+        </div>
+    </div>
+    
+     
+    <div id="clicker">
+        <div  id="textshuf" >Shuffling is Currently Going On....</div>
+        
+            <img id="ss" src="cards.gif"  />
+        </div>
+    
+    
+  </div>  
+<div style="margin-left:auto;margin-right:auto;width:790px;position:relative; top: -200px">
+<div id="content">
+
+<div class="table" style="margin-bottom:10px;margin-left:2px">
+
+
+<div style="display:table-row;border:10px solid white">
+
+
+<div  id="row12" class="cardholder"  onclick="shiftcard(event)" >
+
+</div>
+
+
+
+<div  id="spacing" >
+
+
+<div id="row13" class="cardholder" onclick="doubleclicked(event)" ondragend="dragEnd(event)"   style="border-radius:0px;border:none;background:none;" >
+
+</div>
+
+<div  class="cardholder"   style="border-radius:0px;border:none;background:none;width:100px" >
+
+</div>
+
+<div id ="row8" class="cardholder"  ondragend="dragEnd(event)" ondrop="drop(event)" ondragover="allowDrop(event)" style="background: none;">
+
+</div>
+
+<div id="gapper" > </div>
+<div id ="row9"class="cardholder"  ondragend="dragEnd(event)" ondrop="drop(event)" ondragover="allowDrop(event)" style="background: none;">
+
+</div>
+<div id="gapper" > </div>
+
+<div id ="row10"class="cardholder" ondragend="dragEnd(event)"  ondrop="drop(event)" ondragover="allowDrop(event)" style="background: none;">
+<div class="topcardbox"  > </div>
+</div>
+<div id="gapper" > </div>
+    
+<div id ="row11"class="cardholder" ondragend="dragEnd(event)" ondrop="drop(event)" ondragover="allowDrop(event)"  style="background: none;">
+<div class="topcardbox" > </div>
+</div>
+
+</div>
+
+
+<div id ="divusedforsetDragImage" style="position: absolute;margin-top:50px; z-index: -1;"></div>
+
+
+
+</div>
+</div>
+
+
+<div class="table">
+
+
+<div style="display:table-row;height:580px">
+
+
+<div  id ="row1" onclick="doubleclicked(event)" class="cardholder " ondragend="dragEnd(event)"  ondrop="drop(event)" ondragover="allowDrop(event)" style="border:3px solid green">
+
+
+
+</div>
+
+<div  id="row2"  onclick="doubleclicked(event)" class="cardholder" ondragend="dragEnd(event)"  ondrop="drop(event)" ondragover="allowDrop(event)" style="border:3px solid green" >
+
+
+</div>
+
+<div  id="row3" onclick="doubleclicked(event)" class="cardholder" ondragend="dragEnd(event)"   ondrop="drop(event)" ondragover="allowDrop(event)" style="border:3px solid green">
+
+</div>
+
+
+
+<div id="row4" onclick="doubleclicked(event)" class="cardholder" ondragend="dragEnd(event)"  ondrop="drop(event)" ondragover="allowDrop(event)" style="border:3px solid green">
+
+
+</div>
+
+<div id="row5" onclick="doubleclicked(event)" class="cardholder"ondragend="dragEnd(event)"  ondrop="drop(event)" ondragover="allowDrop(event)" style="border:3px solid green">
+
+</div>
+
+<div   id="row6" onclick="doubleclicked(event)" class="cardholder" ondragend="dragEnd(event)" ondrop="drop(event)" ondragover="allowDrop(event)" style="border:3px solid green">
+
+</div>
+
+<div id="row7" onclick="doubleclicked(event)" class="cardholder" ondragend="dragEnd(event)" ondrop="drop(event)" ondragover="allowDrop(event)" style="border:3px solid green;border-right:none">
+
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+    
+    
+</body>
+</html>
