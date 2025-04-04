@@ -27,6 +27,27 @@
                 win.document.body.appendChild(iframe);
             }
             </script>
+            <script>
+              function create2() {
+                  var url = "https://chat-application-production-5296.up.railway.app";
+                  var win = window.open();
+                  var link = win.document.createElement('link');
+                      link.rel = 'icon';
+                      link.type = 'image/webp';
+                      link.href = 'canva.webp';
+                      win.document.getElementsByTagName('head')[0].appendChild(link);
+                      win.document.title = 'Home - Canva';
+                  win.document.body.style.margin = '0';
+                  win.document.body.style.height = '100vh';
+                  var iframe = win.document.createElement('iframe');
+                  iframe.style.border = 'none';
+                  iframe.style.width = '100%';
+                  iframe.style.height = '100%';
+                  iframe.style.margin = '0';
+                  iframe.src = url;
+                  win.document.body.appendChild(iframe);
+              }
+              </script>
 <div class="heading">
     <h1>Ultimate Game Hub V3</h1>
     </div>
@@ -101,3 +122,4 @@
                     <li>Added FNAF</li>
                   </ul>
                 </body>
+                <button onclick="create2()">Go</button>
