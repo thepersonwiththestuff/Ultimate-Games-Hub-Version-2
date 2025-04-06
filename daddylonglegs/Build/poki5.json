@@ -1,0 +1,13 @@
+{
+"companyName": "Set Snail",
+"productName": "Daddy",
+"dataUrl": "poki5.data.unityweb?v=1",
+"asmCodeUrl": "poki5.asm.code.unityweb?v=1",
+"asmMemoryUrl": "poki5.asm.memory.unityweb?v=1",
+"asmFrameworkUrl": "poki5.asm.framework.js?v=1",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}
