@@ -22,6 +22,11 @@
                 iframe.style.margin = '0';
                 iframe.src = url;
                 win.document.body.appendChild(iframe);
+                iframe.onload = function() {
+                win.onbeforeunload = function() {
+                return "Are you sure you want to leave? Any unsaved progress will be lost.";
+        };
+    };
             }
             </script>
             </script>
@@ -48,6 +53,11 @@
                     iframe.style.margin = '0';
                     iframe.src = url;
                     win.document.body.appendChild(iframe);
+                    iframe.onload = function() {
+                win.onbeforeunload = function() {
+                return "Are you sure you want to leave? Any unsaved progress will be lost.";
+        };
+    };
                 }
             
                 // Function to attach click event to game links only
@@ -87,5 +97,5 @@
                 <h3>Emulators</h3>
                     <a href="webretro" class="game-link">Emulator + Preloaded Games</a>
                     <br><br>
-                    <a href="https://pxl-nova-2.netlify.app/web/" class="game-link">Download Games at romsgames.net</a>
+                    <a href="https://chimerical-klepon-6d3c94.netlify.app/" class="game-link">Download Games at romsgames.net</a>
                 </body>
